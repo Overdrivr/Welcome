@@ -21,6 +21,10 @@ body, html{
   padding-top:40px;
 }
 
+#section2
+{
+  padding-bottom: 5%;
+}
 
 #section2 .col-md-6
 {
@@ -38,6 +42,13 @@ body, html{
 }
 
 
+
+.ion-social-twitter
+{
+   border-radius: 5px;
+  background-color: #512da8;
+  color:white;
+}
 #features
 {
   width:80%;
@@ -46,10 +57,18 @@ body, html{
 }
 
 
-i
+#section1 i
 {
   display: inline-block;
   width: 2em;
+  text-align: center;
+  font-size: 2em;
+}
+
+#section2 i
+{
+  display: inline-block;
+  width: 1.3em;
   text-align: center;
   font-size: 2em;
 }

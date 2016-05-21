@@ -76,8 +76,10 @@
           <div class="row">
 
             <div class="col-md-6">
-              <i class="ion-social-twitter" ></i>
-              <a href="https://twitter.com/micro_ci">@micro-ci</a>
+              <a href="https://twitter.com/micro_ci">
+                <i class="ion-social-twitter" ></i>
+                @micro-ci
+              </a>
             </div>
 
             <div class="col-md-6">
