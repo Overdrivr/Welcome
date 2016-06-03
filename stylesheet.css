@@ -30,7 +30,24 @@ body, html{
   background-color: #512da8;
   color: white;
   padding-top:40px;
+  padding-bottom:40px;
 }
+
+#section1 span
+{
+  font-size:1.5em;
+}
+
+@media only screen and (max-width : 500px) {
+/* Issue with small screen */
+    #section1 span
+    {
+      font-size:1.1em;
+    }
+
+}
+
+
 
 #section2
 {
