@@ -27,39 +27,33 @@
             <!-- Double column bullet points -->
 
             <div class="col-md-5 col-md-offset-1">
-              <i class="ion-fork-repo" aria-hidden="true"></i>
-              <span>Seamless integration with source control</span>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-              <i class="ion-social-github" aria-hidden="true"></i>
-              <span>Seamless integration</span>
+              <i class="ion-gear-a" aria-hidden="true"></i>
+              <span>Embedded code builds for any platform</span>
             </div>
 
             <div class="col-md-5 col-md-offset-1">
-              <i class="ion-checkmark-circled" aria-hidden="true"></i>
-              <span>Multi-platform builds of embedded code</span>
+              <i class="ion-bug" aria-hidden="true"></i>
+              <span>Test your code on real hardware</span>
             </div>
+
+            <div class="col-md-5 col-md-offset-1">
+              <i class="ion-social-github" aria-hidden="true"></i>
+              <span>Seamless integration with version control systems</span>
+            </div>
+
+            <div class="col-md-5 col-md-offset-1">
+              <i class="ion-monitor" aria-hidden="true"></i>
+              <span>Test your code on virtual embedded machines</span>
+            </div>
+
             <div class="col-md-5 col-md-offset-1">
               <i class="ion-stats-bars" aria-hidden="true"></i>
               <span>Detailed measures about built firmwares</span>
             </div>
 
             <div class="col-md-5 col-md-offset-1">
-              <i class="ion-checkmark-circled" aria-hidden="true"></i>
-              <span>Run your tests on real embedded hardware</span>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-              <i class="ion-checkmark-circled" aria-hidden="true"></i>
+              <i class="ion-paper-airplane" aria-hidden="true"></i>
               <span>Deploy embedded code with confidence</span>
-            </div>
-
-            <div class="col-md-5 col-md-offset-1">
-              <i class="ion-checkmark-circled" aria-hidden="true"></i>
-              <span>Or using state-of-the-art embedded virtualization</span>
-            </div>
-            <div class="col-md-5 col-md-offset-1">
-              <i class="ion-arrow-graph-up-right" aria-hidden="true"></i>
-              <span>Increase productivity - Agile</span>
             </div>
 
           </div>
