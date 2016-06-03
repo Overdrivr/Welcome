@@ -5,11 +5,14 @@
 }
 
 body, html{
-  height :100%;
+
 }
 
  #logo g path{
-  fill : #0f0 !important;
+  fill : #ff6f00 !important;
+}
+#logo{
+  min-width:22em !important;
 }
 
 #subtitle{
@@ -24,14 +27,14 @@ body, html{
 }
 
 #section1 {
-  background-color: #225378;
+  background-color: #512da8;
   color: white;
   padding-top:40px;
 }
 
 #section2
 {
-  padding-bottom: 5%;
+  padding-bottom: 1%;
   background-color: white;
 }
 
@@ -55,7 +58,7 @@ body, html{
 .ion-social-twitter
 {
    border-radius: 5px;
-  background-color: #1695A3;
+  background-color: #ff6f00;
   color:white;
 }
 #features
@@ -149,5 +152,5 @@ h3
 #description h3
 {
   text-align: left;
-  margin-left:15%;
+  /*margin-left:15%;*/
 }
