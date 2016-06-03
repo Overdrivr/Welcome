@@ -1,12 +1,21 @@
 /* style.css */
 * {
      vertical-align: middle;
+     font-family: 'Roboto', sans-serif;
 }
 
 body, html{
   height :100%;
-  font-size: 3em;
 }
+
+ #logo g path{
+  fill : #0f0 !important;
+}
+
+#subtitle{
+  margin-top:-0.5%;
+}
+
 
 #wrapper{
    display: flex;
@@ -15,7 +24,7 @@ body, html{
 }
 
 #section1 {
-  background-color: #512da8;
+  background-color: #225378;
   color: white;
   padding-top:40px;
 }
@@ -23,14 +32,15 @@ body, html{
 #section2
 {
   padding-bottom: 5%;
+  background-color: white;
 }
 
 #section2 .col-md-6
 {
   text-align : center;
 }
-#section3 {
-  background-color: #eeeeee;
+#milestones {
+  background-color: white;
   color: #4527a0;
 
   flex:1;
@@ -45,7 +55,7 @@ body, html{
 .ion-social-twitter
 {
    border-radius: 5px;
-  background-color: #512da8;
+  background-color: #1695A3;
   color:white;
 }
 #features
@@ -70,4 +80,74 @@ body, html{
   width: 1.3em;
   text-align: center;
   font-size: 2em;
+}
+
+.ion-bug
+{
+  color: #fdd835 ;
+}
+.ion-stats-bars
+{
+  color:#ff6f00;
+}
+
+
+.ion-gear-a
+{
+  color:#039be5;
+}
+
+.ion-monitor
+{
+  color: #ff5252;
+}
+
+.ion-paper-airplane
+{
+  color:#388e3c;
+}
+h3
+{
+  font-size:1.3em;
+}
+
+#metrics_deploy
+{
+  background-color: #F6F6F6;
+}
+#version_virtual
+{
+  background-color: white;
+}
+#build_test
+{
+  background-color: #F6F6F6;
+}
+
+
+#description i{
+  font-size: 1.8em;
+  margin-right: 1%;
+}
+
+
+#description .row p
+{
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+#description > div
+{
+    padding-top:0%;
+    padding-bottom:2%;
+}
+
+
+#description h3
+{
+  text-align: left;
+  margin-left:15%;
 }
