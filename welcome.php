@@ -73,11 +73,11 @@
       </div>
 
       <div class="col-xs-6">
-        <form class="form-inline text-center" >
+        <form class="form-inline text-center" onsubmit="sendMail(); return false;">
           <div class="input-group">
             <input type="text" class="form-control" id="mail" name="mail" placeholder="e-mail">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="submit" onClick="sendMail();">submit</button>
+              <button class="btn btn-default" type="submit" id="send">submit</button>
             </span>
           </div><!-- /input-group -->
           <input type="hidden" id="token" name="token" value="<?php echo $token ?>" />
@@ -177,56 +177,64 @@
                       </div> <!-- end of version_virtual -->
                     </div>
                   </div>
+                </div>
+              </div>
 
+              <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+              <script>
+              function sendMail()//Use jquery to do ajax request, easier than diretly in javascript
+              {
 
+                $.post('postMail.php',{token:$("#token").val(), mail:$("#mail").val()})
+                .done(function(data) {
 
-
-                  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-                  <script>
-                  function sendMail()//Use jquery to do ajax request, easier than diretly in javascript
+                  if(data == "ok")
                   {
-                    $.post('postMail.php',{token:$("#token").val(), mail:$("#mail").val()})
-                    .done(function(data) {
-                      $('#complete').html(data);
-                    });
+                    $('#send').attr('class', 'btn btn-success disabled');
+                    $('#send').attr('class', 'btn btn-success disabled').prop('disabled', true);
+                  }
+                  else {
+                      $('#send').attr('class', 'btn btn-danger');
+                  }
+                });
+              }
+
+              jQuery('img.svg').each(function(){
+                var $img = jQuery(this);
+                var imgID = $img.attr('id');
+                var imgClass = $img.attr('class');
+                var imgURL = $img.attr('src');
+
+                jQuery.get(imgURL, function(data) {
+                  // Get the SVG tag, ignore the rest
+                  var $svg = jQuery(data).find('svg');
+
+                  // Add replaced image's ID to the new SVG
+                  if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                  }
+                  // Add replaced image's classes to the new SVG
+                  if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
                   }
 
-                  jQuery('img.svg').each(function(){
-                    var $img = jQuery(this);
-                    var imgID = $img.attr('id');
-                    var imgClass = $img.attr('class');
-                    var imgURL = $img.attr('src');
+                  // Remove any invalid XML tags as per http://validator.w3.org
+                  $svg = $svg.removeAttr('xmlns:a');
 
-                    jQuery.get(imgURL, function(data) {
-                      // Get the SVG tag, ignore the rest
-                      var $svg = jQuery(data).find('svg');
+                  // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+                  if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+                  }
 
-                      // Add replaced image's ID to the new SVG
-                      if(typeof imgID !== 'undefined') {
-                        $svg = $svg.attr('id', imgID);
-                      }
-                      // Add replaced image's classes to the new SVG
-                      if(typeof imgClass !== 'undefined') {
-                        $svg = $svg.attr('class', imgClass+' replaced-svg');
-                      }
+                  // Replace image with new SVG
+                  $img.replaceWith($svg);
 
-                      // Remove any invalid XML tags as per http://validator.w3.org
-                      $svg = $svg.removeAttr('xmlns:a');
+                }, 'xml');
 
-                      // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-                      if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-                        $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-                      }
+              });
+              </script>
+              <!-- Latest compiled and minified JavaScript -->
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-                      // Replace image with new SVG
-                      $img.replaceWith($svg);
-
-                    }, 'xml');
-
-                  });
-                  </script>
-                  <!-- Latest compiled and minified JavaScript -->
-                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-                </body>
-                </html>
+            </body>
+            </html>

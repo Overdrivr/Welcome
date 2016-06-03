@@ -2,7 +2,6 @@
 include('config.php');
 
 session_start();
-
 if(isset($_SESSION['token']) && isset($_POST['token']) && isset($_POST['mail'])) //The token is used to prevent repeat attack and avoid double submit
 {
 	if($_SESSION['token'] == $_POST['token'])
@@ -22,7 +21,14 @@ if(isset($_SESSION['token']) && isset($_POST['token']) && isset($_POST['mail']))
 				}
 				unset($_SESSION['token']);
 			}
+			else
+				echo "0";
 		}
+		else
+			echo "0";
+	}
+	else {
+		echo "0";
 	}
 }
 else
