@@ -75,7 +75,7 @@
       <div class="col-xs-6">
         <form class="form-inline text-center" onsubmit="sendMail(); return false;">
           <div class="input-group">
-            <input type="text" class="form-control" id="mail" name="mail" placeholder="e-mail">
+            <input type="mail" class="form-control" id="mail" name="mail" placeholder="e-mail">
             <span class="input-group-btn">
               <button class="btn btn-default" type="submit" id="send">submit</button>
             </span>
@@ -186,8 +186,7 @@
               {
 
                 $.post('postMail.php',{token:$("#token").val(), mail:$("#mail").val()})
-                .done(function(data) {
-
+                .done(function(data) {                  
                   if(data == "ok")
                   {
                     $('#send').attr('class', 'btn btn-success disabled');

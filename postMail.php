@@ -22,13 +22,13 @@ if(isset($_SESSION['token']) && isset($_POST['token']) && isset($_POST['mail']))
 				unset($_SESSION['token']);
 			}
 			else
-				echo "0";
+				echo "-1";
 		}
 		else
-			echo "0";
+			echo "-2";
 	}
 	else {
-		echo "0";
+		echo "-3";
 	}
 }
 else
