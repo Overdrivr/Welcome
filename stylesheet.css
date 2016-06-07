@@ -9,7 +9,10 @@ body, html{
 }
 
  #logo g path{
-  fill : #ff6f00 !important;
+  /*fill : white !important;
+  /*stroke:grey !important;
+  -webkit-filter: drop-shadow( 5px 5px 5px #000 );
+       filter: drop-shadow( 5px 5px 2px #000 );*/
 }
 #logo{
   min-width:22em !important;
@@ -27,10 +30,12 @@ body, html{
 }
 
 #section1 {
-  background-color: #512da8;
-  color: white;
+  	/*text-shadow: 1px 1px #000;*/
+  background-color: #056b9f;
+  color: #F0F0F0;
   padding-top:40px;
   padding-bottom:40px;
+
 }
 
 #section1 span
@@ -114,7 +119,7 @@ body, html{
 
 .ion-gear-a
 {
-  color:#039be5;
+  color:#007ebc;
 }
 
 .ion-monitor
